@@ -1,15 +1,15 @@
 # User Profile API (Express.js + MongoDB + JWT)
 
-## 📌 Overview
+## Overview
 This is a RESTful API that allows users to register, log in, retrieve, and update their profiles. It uses **JWT authentication** to secure routes and ensures users can only access their own profiles.
 
-## 🛠 Tech Stack
+## Tech Stack
 - **Backend:** Express.js  
 - **Database:** MongoDB (Mongoose ODM)  
 - **Authentication:** JWT (JSON Web Token)  
 - **Environment Variables:** dotenv  
 
-## 🚀 Features
+## Features
 - User registration with **hashed password**  
 - JWT-based authentication  
 - Secure profile retrieval and updates  
@@ -46,7 +46,7 @@ npm start
 
 By default, the server runs on http://localhost:3000/
 
-## 🔥 API Endpoints
+##  API Endpoints
 ### User Registration
 Endpoint: POST /users/signup
 #### Request Body:
