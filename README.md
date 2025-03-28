@@ -34,7 +34,7 @@ npm install
 ### 3️⃣ Create a .env file 
 Inside the project root, create a .env file and add the following:
 ```bash
-DB_URL=mongodb+srv://your-database-url
+DB_URL=mongodb+srv://your-database-url (by default it will be- mongodb://localhost:27017)
 JWT_SECRET=your-secret-key
 PORT=3000
 ```
@@ -47,7 +47,7 @@ npm start
 By default, the server runs on http://localhost:3000/
 
 ## Postman Documentation
-To make API testing easier, I have used the Postman for the testing. And I have included the detailed instruction how you can also use the same for the testing purpose.
+To make API testing easier, I have used the Postman for the testing. And I have included the detailed instruction how one can also use the same for the testing purpose.
 
 ### How to Use Postman for API Testing?
 
