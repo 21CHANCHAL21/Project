@@ -47,24 +47,21 @@ npm start
 By default, the server runs on http://localhost:3000/
 
 ## Postman Documentation
-To make API testing easier, we have documented all endpoints in Postman. You can access it using the link below:
-User Profile API - Postman Documentation
+To make API testing easier, I have used the Postman for the testing. And I have included the detailed instruction how you can also use the same for the testing purpose.
 
 ### How to Use Postman for API Testing?
 
-#### 1. Import the Collection
-Open Postman and click on Import → Paste the shared documentation link.
+#### Go to postman and Set Up Environment Variables
 
-#### 2. Set Up Environment Variables
-
-Go to Postman → Environments and create a new environment.
+Go to Postman → Create a new environment.
 Add variables:
-base_url = http://localhost:3000 (or your deployed API URL)
+base_url = http://localhost:3000 
 jwt_token = <your-auth-token> (after logging in)
 
-Test API Endpoints
+Test API Endpoints by selecting the request type (Get, Post, Put(delete))
 ### User Registration
-Endpoint: POST /users/signup
+Endpoint: POST /users/register
+URL: http://localhost:3000/users/register
 #### Request Body:
 ```bash
 {
@@ -86,6 +83,7 @@ Endpoint: POST /users/signup
 
 ### User Login
 Endpoint: POST /users/login
+URL: http://localhost:3000/users/login
 #### Request Body:
 ```bash
 {
@@ -105,6 +103,7 @@ Endpoint: POST /users/login
 
 ### Get Profile (Protected)
 Endpoint: GET /users/profile
+URL: http://localhost:3000/users/profile
 #### Request Body:
 Headers:
 ```bash
@@ -126,6 +125,7 @@ Authorization: Bearer <jwt_token>
 
 ### Update Profile (Protected)
 Endpoint: PUT /users/profile
+URL: http://localhost:3000/users/profile
 #### Request Body:
 Headers:
 ```bash
