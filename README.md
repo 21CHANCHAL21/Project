@@ -47,23 +47,99 @@ npm start
 By default, the server runs on http://localhost:3000/
 
 ## 🔥 API Endpoints
-User Registration
+### User Registration
 Endpoint: POST /users/signup
-### Request Body:
+#### Request Body:
 ```bash
 {
   "name": "John Doe",
   "email": "johndoe@example.com",
+  "address": "Bhopal",
   "password": "securepassword"
 }
 
 ```
-### Response
+#### Response
 ```bash
 {
-  "response": { "id": "userId", "name": "John Doe", "email": "johndoe@example.com" },
+  "response": { "id": "userId", "name": "John Doe", "address": "Bhopal",  "email": "johndoe@example.com" },
   "token": "jwt_token"
 }
 
 ```
 
+### User Login
+Endpoint: POST /users/login
+#### Request Body:
+```bash
+{
+  
+  "email": "johndoe@example.com",
+  "password": "securepassword"
+
+}
+
+```
+#### Response
+```bash
+{
+  "token": "jwt_token"
+}
+```
+
+### Get Profile (Protected)
+Endpoint: GET /users/profile
+#### Request Body:
+Headers:
+```bash
+Authorization: Bearer <jwt_token>
+
+```
+#### Response
+```bash
+{
+   "user": {
+        "_id": "67e64655ed532f866d7eeb62",
+        "name": "ABCD",
+        "email": "shraddha@hillvalley.edu12",
+        "address": "Bhopal, Indore highway",
+       
+    }
+}
+
+```
+
+### Update Profile (Protected)
+Endpoint: PUT /users/profile
+#### Request Body:
+Headers:
+```bash
+Authorization: Bearer <jwt_token>
+
+```
+
+#### Request Body:
+```bash
+  
+ {
+  "name": "Updated Name",
+  "bio": "This is my updated bio"
+}
+```
+
+#### Response
+```bash
+{
+  "message": "Profile updated successfully"
+}
+
+
+```
+
+## Postman Documentation
+
+
+## Important Notes
+
+Ensure MongoDB is running and the DB_URL is correctly set in .env.
+JWT_SECRET must be a strong, secure key.
